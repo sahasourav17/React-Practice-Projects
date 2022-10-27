@@ -281,4 +281,9 @@ function Apple(x, y, color, score){
     */
 }
 
-new Apple();
+var apple_1 = new Apple(10,20,'red',160);
+var apple_2 = new Apple(10,30,'green',180);
+var apple_3 = new Apple(10,40,'brown',20);
+
+// Modifying instances
+apple_2.score = 190;
