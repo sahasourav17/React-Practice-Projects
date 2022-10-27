@@ -287,3 +287,41 @@ var apple_3 = new Apple(10,40,'brown',20);
 
 // Modifying instances
 apple_2.score = 190;
+
+/*
+    Concept: Prototypes
+    - Good memory Efficiency
+    Note:
+        Everything that unique to that object is on instance level
+        Everything that doesn't unique for instances should be on Prototype.
+        JS treats functions as callable objects.
+
+    From the below example:
+        eat() & throw() method is not unique for instance level so it will be on prototype
+*/
+
+function Fruit(fruitName, color, weight){
+    this.fruitName = fruitName;
+    this.color = color;
+    this.weight = weight;
+
+}
+
+Fruit.prototype = {
+    eat : function(){ return 'eat the fruit'; },
+    throw : function(){ return 'throw the fruit'; }
+};
+
+var fruit_1 = new Fruit('apple','red',30);
+var fruit_2 = new Fruit('banana','red',40);
+var fruit_3 = new Fruit('orange','red',60);
+
+// modfying prototype
+Apple.prototype.eat = function(){ return 'This apple already eaten!!'; }
+
+/*
+    Prototype is a shared object.
+    Note:
+        Try to focus on symbol name so that
+        no collision occurs on instance or prototype level
+*/
