@@ -350,4 +350,20 @@ var fruit_1 = new Fruit('apple','red',30);
 var fruit_2 = new Fruit('banana','red',40);
 var fruit_3 = new Fruit('orange','red',60);  
 ```
-   
+### DOM (Document Object Model)
+
+**Node Properties**
+* ```attributes``` - returns a live collection of all atrributes registered.
+* ```childNodes``` - gives a collection of an element's child nodes.
+* ```firstChild``` - returns the first child node of an element.
+* ```lastChild``` - returns the last child of an element.
+
+**Node Methods**
+* ```appendChild()``` - adds a new child node to an element as the last child node.
+* ```insertBefore()``` - inserts a new child before a specified & existing child node.
+* ```removeChild()``` - removes a child node from an element.
+
+**Element Methods**
+* ```getAttribute()``` - returns the specified attribute value of an element node.
+* ```getAttributeNS()``` - returns string value of the attribute with the specified namespace and name.
+* ```getElementsByTagName()
