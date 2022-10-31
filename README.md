@@ -122,6 +122,173 @@ delete car.engine.size; // member deletion. Outputs a bolean value (true/false).
 ### Array Modification
 
 **Prebuilt Array Methods**
-* ```concat``` - join several arrays into one.
+* ```concat()``` - join several arrays into one.
+* ```indexOf()``` - returns the first position at which a given element appears in an array.
+* ```join()``` - combine elements of an array into a single string and return the string.
+* ```lastIndexOf()``` - returns the last position at which a given element appears in an array.
+* ```pop()``` - removes the last element of an array.
+* ```push()``` - add a new element at the end of an array.
+* ```shift()``` - removes the first element of an array.
+* ```slice()``` - pulls a copy of portion of an array into a new array.
+* ```sort()``` - sorts the element alphabetically.
+* ```unshift()``` - inserts new elements to the beginning.
+* ```splice(fromPos,noOfElementsToBeDeleted,newElementsToBeAddes)``` - add elements from a specified position.
+* ```splice(fromPos,noOfElementsToBeDeleted)``` - remove elements from specified position.
+* ```toString()``` - converts elements to string.
+ 
+```js
+var array = [
+    "Sourav",
+    93,
+    ['Brain Station',23],
+    {
+        officeLocation : '2 Mohakhali C/A',
+        postCode: 'Dhaka-1212',
+    },
+    {
+        isTrainee: true
+    },
+    function(){return 'They are in industrial attachment program';}
+];
 
+array[0] += ' Saha';
+array[5] = 'Changed to String';
+// array.isDemo = "Yes";
 
+array.shift(); // delete the first element
+array.pop(); // delete the last element
+
+/*
+    unshift() insert elements to beginning and
+    returns the length of that array.
+*/
+array.unshift("Sourav","Saha","ID",1704093,[]);
+
+/*
+    push(): add elements to end of the array
+*/
+array.push(20,20.03);
+
+/*
+    splice(fromPos,noOfElementsToBeDeleted): remove elements from specified position
+*/
+array.splice(1,2);
+
+array.splice(1,0,"hello","world",200); // to add element from a specified position
+
+```
+### **Functions or Subroutines**
+    
+Basic Structure
+```js
+function name(param1,param2,param3){
+    // code goes here.
+}
+```
+    
+```js
+function makeCoffe(milk,sugar){
+    let instruction = "boil water";
+    instruction += " Pour into cup ,";
+    instruction += ' Add coffe,';
+    instruction += ' Add '+milk+' spoons of  milk,';
+    instruction += ' Add '+sugar+' spoons of sugar.';
+    return instruction
+};
+```
+### Callable Objects
+    
+    Functions are callable objects.
+    Callable objects can have callable objects (Nested Callable Objects).
+    
+* **Subroutine inside a subroutine**
+```js
+    function demo(){
+    var fullName = 'Sourav Saha';
+
+    function concat( name ){
+        return "Trainee " + name;
+    }
+    return concat(fullName); // invoking concat function and return
+}
+```
+* **Objects as a parameter of a subroutine or function** 
+```js
+function Name( fullName ){
+    return fullName.firstName + fullName.lastName;
+}
+console.log(Name({
+    firstName:'Sourav',
+    lastName: ' Saha'
+}));
+```
+    
+### Memory Hoisting
+ 
+* A feature of JavaScript
+* Hoisting means lift-up
+ 
+```js
+console.log(firstName,printName());
+var firstName = 'Sourav';
+function printName(){
+    console.log(a,embed());
+    function embed(){return 'Hello';}
+    var a = 100;
+    /*
+        var a; //created a variable named a which is  undefined
+        console.log(a); // returns undefined as a still undefined variable
+        a = 100; // set the value of a to 100
+    */
+    return "Saha-Laxman";
+}  
+```    
+### Scope and Closure
+* scope -> access
+* concept of ```garbage collection```. garbage means variables,subroutines which is not need for this program and taking unnecessary memory.
+* uses symbol table
+
+**Inferred Global Scope**
+* variables or subroutines defined in global scope can be accessed from anywhere in that program.
+* globally declared objects or variable can't be changed from a subroutine.
+* variable defined in a function can't be accessed from outside of that function.That means this is explicitly creating this symbol in this scope and none other.
+
+```js
+var engine = {
+    piston: '4-Piston',
+    titan: '5-Titan'
+};
+
+function runExpression(){
+    var a  = 10;
+    function add(){
+        console.log(engine)
+    }
+    add();
+}
+runExpression();
+```
+    
+### Context of ```this```
+- A keyword.
+- By default points to the window object.
+- callable object allow us to change the ```this``` context.
+
+```js
+var object = {
+    prop: this,
+    method: function(){ return this; }
+};
+
+var array = [
+    this,
+    function(){ return this;}
+];
+
+function global(){
+    return this;
+}
+
+global.call(object);
+new global() // to change the context of this
+```
