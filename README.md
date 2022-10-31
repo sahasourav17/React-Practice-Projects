@@ -292,3 +292,62 @@ function global(){
 global.call(object);
 new global() // to change the context of this
 ```
+
+### Constructor
+- can be viewed as a blueprint.
+- ```instance``` : a copy of the blueprint.
+    
+**Note:**
+- Naming Convention: First letter of the constructor will be capital.
+ ```js
+ function Apple(x, y, color, score){
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.score = score;
+
+    /*
+        by default return the value of this
+        so no need to write return statement again.
+    */
+}
+
+var apple_1 = new Apple(10,20,'red',160);
+var apple_2 = new Apple(10,30,'green',180);
+var apple_3 = new Apple(10,40,'brown',20);
+ 
+// Modifying instances
+apple_2.score = 190;
+```
+    
+### Prototypes
+- Good memory efficiency.
+- A shared object.
+
+ **Note:**
+ - Everything that unique to that object is on instance level
+ - Everything that doesn't unique for instances should be on Prototype.
+ - JS treats functions as callable objects.
+   
+```js
+function Fruit(fruitName, color, weight){
+    this.fruitName = fruitName;
+    this.color = color;
+    this.weight = weight;
+
+}
+
+/*
+    eat() and throw() method is not unique for each instances
+    so, it will be on prototype
+*/
+Fruit.prototype = {
+    eat : function(){ return 'eat the fruit'; },
+    throw : function(){ return 'throw the fruit'; }
+};
+
+var fruit_1 = new Fruit('apple','red',30);
+var fruit_2 = new Fruit('banana','red',40);
+var fruit_3 = new Fruit('orange','red',60);  
+```
+   
