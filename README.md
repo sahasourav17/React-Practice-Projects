@@ -366,4 +366,4 @@ var fruit_3 = new Fruit('orange','red',60);
 **Element Methods**
 * ```getAttribute()``` - returns the specified attribute value of an element node.
 * ```getAttributeNS()``` - returns string value of the attribute with the specified namespace and name.
-* ```getElementsByTagName()
+* ```getElementsByTagName()```
