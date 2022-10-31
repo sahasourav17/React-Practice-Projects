@@ -17,9 +17,9 @@ Advantages of using Method-2:
 * It makes HTML and JS easier to read and maintain
 * Cached JS files can speed up page loads
 
-**Note: Scripts can be placed in <body>, or in the <head> section of an HTML page,or in both.
+**Note: Scripts can be placed in ```<body>```, or in the ```<head>``` section of an HTML page,or in both.
       But if we place the scripts in head section it will slows down the HTML rendering.
-      So, we will always try to place the scripts in the <body> section.**
+      So, we will always try to place the scripts in the ```<body>``` section.**
       
 ### Variables
 
