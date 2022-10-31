@@ -367,3 +367,10 @@ var fruit_3 = new Fruit('orange','red',60);
 * ```getAttribute()``` - returns the specified attribute value of an element node.
 * ```getAttributeNS()``` - returns string value of the attribute with the specified namespace and name.
 * ```getElementsByTagName()```
+
+
+
+## Resources:
+* Udemy: [udemy.com/course/javascript-essentials/](https://www.udemy.com/course/javascript-essentials/)
+* w3schools: https://www.w3schools.com/js/
+* OOP in JS: https://www.youtube.com/watch?v=4l3bTDlT6ZI&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7/
