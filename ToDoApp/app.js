@@ -20,7 +20,7 @@ addButton.addEventListener('click',()=>{
         newTask.innerHTML = `
             <p> ${input.value} </p>
             <div class="item-btn">
-                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-check"></i>
                 <i class="fa-solid fa-xmark"></i>
             </div>
             `
@@ -38,5 +38,13 @@ addButton.addEventListener('click',()=>{
 tasks.addEventListener('click',(e)=>{
     if (e.target.classList.contains('fa-xmark')){
         e.target.parentElement.parentElement.remove();
+    }
+})
+
+// mark task as completed
+
+tasks.addEventListener('click',(e)=>{
+    if (e.target.classList.contains('fa-check')){
+        e.target.parentElement.parentElement.classList.toggle('completed');
     }
 })
