@@ -1,4 +1,13 @@
-# JS-Basic
+# JS-Basics
+
+## Day-1
+
+- No relation wiht JAVA
+- It has two engine.
+       - Rendering Engine : Renders HTML and CSS
+       - JavaScript Engine : Converts human readable JS code to Machine code
+- JIT(Just In Time) compiler
+
 
 ### Adding JS in an HTML Page
 * Method-1
@@ -38,6 +47,8 @@ let c = true; // Bolean
 
 const PI = 3.14159; // Constant numbers.
 ```
+
+## Day-2
 
 **Objects**
 ```js
@@ -90,7 +101,7 @@ let car = {
 ```
 **Member Access**
 
-* Dot Operator(.)
+* Object member access - Dot Operator(.)
 * Computed member access
 ```js
 // dot operator
@@ -350,7 +361,55 @@ var fruit_1 = new Fruit('apple','red',30);
 var fruit_2 = new Fruit('banana','red',40);
 var fruit_3 = new Fruit('orange','red',60);  
 ```
+
+## Day-3
+
+### **Comparsion Operator**
+- ```===``` & ```!==``` prevents polymorphism
+- '10' == 10 returns ```true```
+- '10' === 10 returns ```false```
+
+**If Statement**
+
+Basic Structure:
+```js
+if (condition){
+    // action goes here
+}
+```
+**For Loop**
+
+Basic Structure:
+```js
+for(initialization;condition,increment/decrement){
+   // code goes here
+}
+```
+**for ... in and for ... of** [From w3schools]
+```js
+// for ... in syntax
+var array = [2,4,6];
+for(let index in a){
+    console.log(array[index]);
+}
+
+// for ... of syntax
+for (let i of array){
+    console.log(i);
+}
+
+Output of both:
+2
+4
+6
+
+```
+## Day-4
+
 ### DOM (Document Object Model)
+
+- Can modify,add, and remove HTML elements and attributes
+- Can change CSS
 
 **Node Properties**
 * ```attributes``` - returns a live collection of all atrributes registered.
