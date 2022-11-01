@@ -4,8 +4,9 @@
 
 - No relation wiht JAVA
 - It has two engine.
-       - Rendering Engine : Renders HTML and CSS
-       - JavaScript Engine : Converts human readable JS code to Machine code
+
+       * Rendering Engine : Renders HTML and CSS
+       * JavaScript Engine : Converts human readable JS code to Machine code
 - JIT(Just In Time) compiler
 
 
