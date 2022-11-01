@@ -33,3 +33,10 @@ addButton.addEventListener('click',()=>{
     }
 )
 
+// Deletion of tasks from tasks list
+
+tasks.addEventListener('click',(e)=>{
+    if (e.target.classList.contains('fa-xmark')){
+        e.target.parentElement.parentElement.remove();
+    }
+})
