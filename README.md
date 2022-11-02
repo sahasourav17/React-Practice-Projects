@@ -8,6 +8,7 @@
        * Rendering Engine : Renders HTML and CSS
        * JavaScript Engine : Converts human readable JS code to Machine code
 - JIT(Just In Time) compiler
+- JS evaluates expression from left to right. Different sequences can produce different results.
 
 
 ### Adding JS in an HTML Page
@@ -38,6 +39,7 @@ Advantages of using Method-2:
 
 * **```let```** - Similar to const but ``let`` variable can reassigned but not re-declared.
 
+
 **Data Types**
 ``` js
 var employeeId = 1704093; // Numbers
@@ -47,7 +49,33 @@ var x = 'Sourav'; // String.Here, you can use  double quotation also.
 let c = true; // Bolean
 
 const PI = 3.14159; // Constant numbers.
+
+let car; // value and type is undefined.
 ```
+
+- Any variable can be emptied, by setting the value to ```undefined```. The type will also be ```undefined```.
+- JS has dynamic types. This means that the same variable can be used to hold different data types.
+- You can use quotes inside a string, as long as they don't match the quotes surrounding the string
+
+```js
+let answer1 = "It's alright";             // Single quote inside double quotes
+let answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes
+let answer3 = 'He is called "Johnny"';    // Double quotes inside single quotes
+```
+- An empty string has both a legal value and a type.
+```js
+let car = "";    // The value is "", the typeof is "string"
+```
+
+- Extra large or extra small numbers can be written with scientific(exponential) notation
+
+```js
+let y = 123e5;      // 12300000
+let z = 123e-5;     // 0.00123
+```
+
+- ```typeof``` : returns the type of a variable or an expression.
+
 
 ## Day-2
 
