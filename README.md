@@ -283,6 +283,14 @@ function printName(){
     return "Saha-Laxman";
 }  
 ```    
+**Function Invocation**
+
+The code inside the function will execute when "something" invokes (calls) the function:
+
+* When an event occurs (when a user clicks a button)
+* When it is invoked (called) from JavaScript code
+* Automatically (self invoked)
+
 ### Scope and Closure
 * scope -> access
 * concept of ```garbage collection```. garbage means variables,subroutines which is not need for this program and taking unnecessary memory.
