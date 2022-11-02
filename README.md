@@ -355,6 +355,16 @@ global.call(object);
 new global() // to change the context of this
 ```
 
+The ```this``` keyword refers to different objects depending on how it is used:
+
+* In object method, ```this``` refers to the object,
+* Alone, ```this``` refers to the global object.
+* In a function, ```this``` refers to the global object.
+* In a function (strict mode) ,```this``` is undefined.
+* In an event, ```this``` refers to the element that received the event.
+* Methods linek ```call()```, ```apply()```, ```bind()``` can refer ```this``` to any object.
+
+
 ### Constructor
 - can be viewed as a blueprint.
 - ```instance``` : a copy of the blueprint.
