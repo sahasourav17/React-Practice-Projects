@@ -262,11 +262,20 @@ console.log(Name({
     lastName: ' Saha'
 }));
 ```
+
+**Function Invocation**
+
+The code inside the function will execute when "something" invokes (calls) the function:
+
+* When an event occurs (when a user clicks a button)
+* When it is invoked (called) from JavaScript code
+* Automatically (self invoked)
     
 ### Memory Hoisting
  
 * A feature of JavaScript
 * Hoisting means lift-up
+* JS only hoists declarations, not initializations.
  
 ```js
 console.log(firstName,printName());
@@ -283,13 +292,18 @@ function printName(){
     return "Saha-Laxman";
 }  
 ```    
-**Function Invocation**
+### Strict Mode
+* To secure JS.
+* Strict mode is declared by adding ```"use strict"```; to the beginning of a script or a function.
+* Deleting a function is not allowed.
+* Duplicating a parameter name is not allowed.
+* Using a variable, Object without declaring it, is not allowed.
 
-The code inside the function will execute when "something" invokes (calls) the function:
+```js
+"use strict";
+x = 3.14;                // This will cause an error
+```
 
-* When an event occurs (when a user clicks a button)
-* When it is invoked (called) from JavaScript code
-* Automatically (self invoked)
 
 ### Scope and Closure
 * scope -> access
